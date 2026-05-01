@@ -1,4 +1,9 @@
 # Customer Behavior & Strategic Growth Analysis
+This project presents a comprehensive, end-to-end data analytics pipeline designed to transform raw retail data into high-impact business intelligence. By integrating Python, SQL, and Power BI, the project covers the full lifecycle of data—from rigorous cleaning and structural engineering to complex analytical modeling and executive visualization.
+
+<img width="1920" height="1200" alt="Screenshot (573)" src="https://github.com/user-attachments/assets/75de2591-df02-4b43-9736-d9046c413839" />
+<img width="1920" height="1200" alt="Screenshot (572)" src="https://github.com/user-attachments/assets/d2333b67-96eb-4156-a87a-69ba45fec9a5" />
+
 
 ## Table of Contents
 1. [Project Overview](#1-project-overview)

@@ -6,7 +6,6 @@
 3. [Data Cleaning & Preprocessing (Python)](#3-data-cleaning--preprocessing-python)
    - [Null Value Identification](#null-value-identification)
    - [Advanced Imputation Logic](#advanced-imputation-logic)
-   - [Regex Scrubbing & Normalization](#regex-scrubbing--normalization)
 4. [Structured Data Analysis (SQL)](#4-structured-data-analysis-sql)
 5. [Business Intelligence Dashboard (Power BI)](#5-business-intelligence-dashboard-power-bi)
 6. [Key Findings & Strategic Insights](#6-key-findings--strategic-insights)
@@ -39,10 +38,6 @@ To prevent statistical bias, we avoided simple mean-fills:
 - **Subscription Status:** Nulls were logically mapped to 'No' (Standard User), assuming a lack of record implies a lack of enrollment.
 - **Size:** Imputed with the **Mode** of the specific Item Type.
 
-### Regex Scrubbing & Normalization
-- Used Python's `re` module to strip hidden whitespace and non-printable characters from string columns.
-- Standardized 'Item Type' naming conventions (e.g., "iphone" and "I-Phone" mapped to "Smartphone").
-
 ## 4. Structured Data Analysis (SQL)
 SQL was employed to simulate enterprise-level data retrieval:
 - **Window Functions:** `RANK()` and `DENSE_RANK()` used to find the top 3 items by revenue per category.
@@ -52,7 +47,7 @@ SQL was employed to simulate enterprise-level data retrieval:
 ## 5. Business Intelligence Dashboard (Power BI)
 The Power BI layer serves as the stakeholder interface, featuring:
 - **DAX Calculations:** Custom measures for 'Subscription Conversion Rate' and 'Total Revenue Growth'.
-- **Dynamic Filtering:** Slicers for Season, Category, and Gender to allow for granular exploration.
+- **Dynamic Filtering:** Slicers for Category, Subscription and Gender to allow for granular exploration.
 - **Visual Insights:** Decomposition trees to see what factors most influence high review ratings.
 
 ## 6. Key Findings & Strategic Insights
@@ -61,12 +56,15 @@ The Power BI layer serves as the stakeholder interface, featuring:
 - **Category Performance:** **Electronics** accounts for 55% of revenue but has the lowest average rating (2.9/5), indicating a need for quality control or post-purchase support improvements.
 
 ## 7. Technical Stack
-- **Languages:** Python (Pandas, NumPy, Seaborn), SQL (PostgreSQL/MySQL).
-- **Tools:** Power BI Desktop, Jupyter Notebooks.
+- **Languages:** Python (Pandas, NumPy, Seaborn, Matplotlib, Plotly, Sqlalchemy), SQL (PostgreSQL/MySQL).
+- **Tools:** Power BI Desktop, Google Colab, Excel, SQL Workbench, Ngrok.
 - **Environment:** Excel (Initial Audit).
 
+## 8. Report
+- **Insights:** A report in pdf format is given to understand about data and project better. Key insights has also been presented.
+
 ## 8. How to Run the Project
-1. **Prepare Data:** Place the `raw_data.csv` in the root directory.
-2. **Clean:** Run the `cleaning_pipeline.ipynb` to generate `processed_data.csv`.
-3. **Query:** Use the scripts in `/sql_queries` to create views and perform cohort analysis.
-4. **Visualize:** Open `strategic_dashboard.pbix` and refresh the data source to view updated charts.
+1. **Prepare Data:** Place the `customer_shopping_behavior.csv` in the root directory.
+2. **Clean:** Run the `Customer_behaviour_analysis_data_cleaning_eda.ipynb` to generate `cust_behav_cleaned_data.csv`.
+3. **Query:** Use the `Customer_behavior_business_insights_sql.sql` to create views and perform cohort analysis.
+4. **Visualize:** Open `Cust_behav.pbix` and refresh the data source to view updated charts.
